@@ -19,10 +19,22 @@
         <button>Submit</button>
     </label>
     <script>
+         window.onerror = function(){
+            alert("error happens")
+        }
         let btn = document.getElementsByTagName("button");
+        let firstOperand = document.getElementById("one");
+        let secondOperand = document.getElementById("two");
+       
         btn[0].onclick = function () {
+            if(isNaN(parseFloat(firstOperand.value))||isNaN(parseFloat(secondOperand.value))){
+                alert("Check input!!");
+                return;
+               
+            }
             document.getElementById("three").value = parseInt(document.getElementById("one").value) + parseInt(document.getElementById("two").value);
         }
+       
     </script>
 </body>
 
