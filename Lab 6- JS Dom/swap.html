@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+<div style="margin-top: 100px;"></div>
+    <div id="container" style="display: flex;justify-content: space-around;gap: 20px;">
+        <img src="./thomas.jpg" alt="" id="img1" height="200px" width="300px">
+        <img src="./thomas1.jpg" alt="" id="img2" height="200px" width="300px">
+    </div>
+    <div style="display: flex;justify-content: center;">
+        <button id="Btn" style="text-align: center;">Swap</button>
+    </div>
+
+</body>
+<script>
+    let img1Ref = document.getElementById("img1");
+    let img2Ref = document.getElementById("img2");
+    let buttonRef = document.getElementById("Btn");
+    console.log(img1Ref.src);
+    buttonRef.onclick = function () {
+        
+        let img1Ref = document.getElementById("img1");
+        let img2Ref = document.getElementById("img2");
+        let temp = img1Ref.src;
+        img1Ref.src = img2Ref.src;
+        img2Ref.src = temp; 
+
+    }
+
+</script>
+
+</html>
