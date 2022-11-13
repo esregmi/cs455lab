@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPrime(num) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    for (let i = 2, s = Math.sqrt(num); i <= s; i++)
+                        if (num % i === 0) reject({ prime: false });
+                    resolve({ prime: num > 1 });
+                }, 500);
+            });
+        }
+
+        //Test code from here
+        console.log('start');
+        isPrime(7)
+            .then(res => console.log(res))
+            .catch(err => console.error(err));
+        console.log('end');   
+    </script>
+</body>
+
+</html>
