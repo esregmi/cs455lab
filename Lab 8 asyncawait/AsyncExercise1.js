@@ -1,5 +1,5 @@
 
-async function isPrime(num) {
+function isPrime(num) {
     return new Promise((resolve, reject) => {
         setTimeout(function () {
             for (let i = 2, s = Math.sqrt(num); i <= s; i++)
