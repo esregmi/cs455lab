@@ -7,4 +7,5 @@
 5. [Lab 5]()
 6. [Lab 6 DOM](https://github.com/esregmi/cs455lab/tree/main/Lab%206-%20JS%20Dom)
 7. [Lab 7 Asynchronous Programming](https://github.com/esregmi/cs455lab/tree/main/Lab%207-%20Async%20Programming)
+8. [Lab 8 Async/Await](https://github.com/esregmi/cs455lab/tree/main/Lab%207-%20Async%20Programming)
 
