@@ -1,0 +1,43 @@
+header {
+    background-color: rgb(3 169 244);
+}
+header .header-title {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+#loginContainer{
+
+    padding-right: 15px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+body{
+    background-color: rgb(88, 88, 243);
+    box-sizing: border-box;
+}
+
+#errormsg{
+    color: red;
+    font-size: 12px;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    box-shadow: 2px 2px 4px 4px #00000040;
+    padding: 16px;
+    border-radius: 8px;
+    width: 220px;
+}
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.form-field.with-button {
+    align-items: center;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+audio::-webkit-media-controls-panel{
+background-color:red !important;
+}
+        body {
+            margin: 0;
+        }
+
+        .musicbar {
+            overflow: hidden;
+            background-color: rgb(37, 163, 209);
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+        <audio id="player" src="vincent.mp3"></audio>
+<div> 
+  <button onclick="document.getElementById('player').play()">Play</button> 
+  <button onclick="document.getElementById('player').pause()">Pause</button> 
+  <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+  <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
+</div> -->
+    </div>
+    <div class="musicbar" align="center">
+        <audio controls style="width: 80%;background-color: 1E90FF; color: red;">
+            <button>next</button>
+            <source src="../videoplayback.m4a" type="audio/mpeg">
+        </audio>
+        <button>Play</button>
+        <button>Next</button>
+        <button>Previous</button>
+        <button>Repeat</button>
+        <button>Suffle</button>
+        <button>PlayAgain</button>
+    </div>
+</body>
+
+</html>

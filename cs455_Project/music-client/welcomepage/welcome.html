@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./constants.js"></script>
+    <script src="./welcome.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: #e1f5fe;">
+    <header>
+        <nav class="navbar navbar-dark">
+            <div>
+                <img src="../logo.png" alt="" height="40px" />
+                &ensp;
+                <label class="header-title">Ruslan 100% Pure Music</label>
+            </div>
+            <div> <input type="text" placeholder="Search Music.." name="" id="musicSearch">
+                <button id="searchBtn">Search</button>
+            </div>
+            <button id="logout">Logout</button>
+        </nav>
+    </header>
+    <div class="songs-lists">
+        <div style="padding: 10px; font-weight: bold;">WELCOME HERE <span id="userSpan" style="color: BLUE;"></span>!!!
+            </p>
+        </div>
+        <div style="padding:0px 20px;">
+            <div id="playlistDiv" class="text-capitalize section-header">
+                Songs you may be interested on
+            </div>
+            <table id="welcomeTable" class="table table-striped table-dark table table-bordered table table-hover">
+                <thead style="background-color: rgb(92, 158, 212);">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Release Date</th>
+                        <th scope="col" style="text-align: center;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="thead-light" id="welcomeTableBody">
+
+                </tbody>
+            </table>
+            <div id="playlistDiv" class="text-capitalize section-header">
+                Playlist
+            </div>
+            <table id="welcomeTable2" class="table table-striped table-dark table table-bordered table table-hover">
+                <thead style="background-color: rgb(92, 158, 212);">
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="playlistTable">
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <div class="musicbar" id="musicDiv">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+                <div>
+                    <div id="songImage"><img src="../logo.png" alt="" height="40px"></div>
+                </div>
+                <div id="currentlyPlaying" style="margin-left: 8px;font-weight: bold; color: white;"></div>
+            </div>
+            <div id="shuffleMode" style="color: white;">
+
+            </div>
+        </div>
+        <div>
+            <audio id="myAudio" src="" type="audio/mp3" autoplay>
+            </audio>
+            <div style="margin: 16px 0px;">
+                <div style="display: flex; align-items: center;">
+                    <div id="timeInfo" style="margin-right: 16px; color: white;">
+                        00:00/00:00
+                    </div>
+                    <div style="position: relative; height: 8px; width: 100%;">
+                        <div
+                            style="position: absolute; top: 2px;z-index: 2; border-radius: 2px; width: 100%;height: 4px; background-color: gainsboro;">
+                        </div>
+    
+                        <div id="progress-bar"
+                            style="position: absolute;z-index: 4; border-radius: 4px; height: 8px; background-color: rgb(3 169 244);">
+                            <div id="progress-thumb"
+                                style="cursor: pointer; position: absolute; right: -6px; top: -2px; height: 12px; width: 12px; border-radius: 50%; background-color: rgb(3 169 244); box-shadow: 0px 0px 3px 3px #00000040">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; margin: 8px 0px; justify-content: center">
+                    <button title="Previous" id="prebtn" class="rounded-circle sqaure-32 media-btn"
+                        style="line-height: 0;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-skip-start" viewBox="0 0 16 16">
+                            <path stroke="currentColor" stroke-width="0.5"
+                                d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.52-.302 1.233.043 1.233.696v7.384c0 .653-.713.998-1.233.696L5 8.752V12a.5.5 0 0 1-1 0V4zm7.5.633L5.696 8l5.804 3.367V4.633z" />
+                        </svg>
+                    </button>
+                    <button id="playPauseBtn" title="Play" class="rounded-circle sqaure-32 media-btn"
+                        style="line-height: 0;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-play" viewBox="0 0 16 16">
+                            <path stroke="currentColor" stroke-width="0.5"
+                                d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
+                        </svg>
+                    </button>
+                    <button title="Next" id="nextbtn" class="rounded-circle sqaure-32 media-btn"
+                        style="line-height: 0;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-skip-end" viewBox="0 0 16 16">
+                            <path stroke="currentColor" stroke-width="0.5"
+                                d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.713 3.31 4 3.655 4 4.308v7.384c0 .653.713.998 1.233.696L11.5 8.752V12a.5.5 0 0 0 1 0V4zM5 4.633 10.804 8 5 11.367V4.633z" />
+                        </svg>
+                    </button>
+
+                    <!-- <button id="repeatbtn">Repeat</button> -->
+                    <button title="Shuffle" id="sufflebtn" class="rounded-circle sqaure-32 media-btn"
+                        style="line-height: 0;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-shuffle" viewBox="0 0 16 16">
+                            <path stroke="currentColor" stroke-width="0.5" fill-rule="evenodd"
+                                d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z" />
+                            <path stroke="currentColor" stroke-width="0.5"
+                                d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z" />
+                        </svg>
+                    </button>
+
+                    <!-- <button id="playagainbtn">PlayAgain</button> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
