@@ -1,0 +1,10 @@
+.error-input {
+    border: 2px solid rgb(10, 14, 10);
+    background-color: #9b2406;
+    color: rgb(13, 13, 14);
+}
+
+#fillData {
+    display: flex;
+    
+}

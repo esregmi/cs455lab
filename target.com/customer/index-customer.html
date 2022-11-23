@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    .myDivFirstHeader {
+      display: grid;
+      grid-template-columns: 15% 1.3fr 1fr 15%;
+      background-color: rgb(204, 0, 0);
+      padding: 10px;
+      color: white;
+      text-align: left;
+      /* overflow: hidden; */
+    }
+
+    .divInsideFirstHeader {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .myDivSecondHeader {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 18% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 18%;
+      padding: 10px;
+    }
+
+    .myDivSecondHeader a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="myDivFirstHeader">
+    <div></div>
+    <div class="div1">
+      <div>My store</div>
+    </div>
+    <div class="divInsideFirstHeader">
+      <div></div>
+      <div>Registry</div>
+      <div>WeeklyAd</div>
+      <div>RedCard</div>
+      <div>TargetCircle</div>
+      <div>Find Store</div>
+    </div>
+  </div>
+  <div class="myDivSecondHeader">
+    <div></div>
+    <img src="../image/logo.jpg" alt="" height="30px">
+    <div>Categories</div>
+    <div>Deals</div>
+    <div>What's New</div>
+    <div>Pickup & Delivery</div>
+    <div><input type="text" placeholder="Search" style="width: 300px;"></div>
+    <div><label><img src="/user-interface.png" alt="" height="30" style="padding-left: 10px;"></label><label
+        style="padding-left: 15px;">Sign
+        in</label></div>
+    <div><img src="/icons8-shopping-cart-24.png" alt="" height="30"></div>
+  </div>
+
+<div style="display: flex; justify-content: center;">
+  <a href="/customer/products/product-list.html" target="_blank"><img src="/image/phone.jpg" alt="" height="200px"></a>
+</div>
+</body>
+
+</html>
